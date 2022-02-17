@@ -3,6 +3,13 @@ Feature: As a user I want to log in to the web site
 
 Scenario: User access the web site for first time (when not logged in yet)
 Given I open the web site
+Then I see the login form
+Then I see the H1 with text "Sign in"
+Then I see the username input field
+Then I see the password input field
+Then I see the sign in button
+
+
 #Given the user opens web site for the first time (when not logged in yet)
 #Then login screen with user name and password entries and login button is displayed
 
