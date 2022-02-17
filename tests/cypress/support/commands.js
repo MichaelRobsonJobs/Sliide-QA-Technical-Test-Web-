@@ -23,3 +23,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("assertCopyrightDisplayed", (linkText, expectedHref) => {
+  cy.contains("Copyright © Sliide 2022");
+  cy.contains("a", "Sliide");
+  cy.assertHref("Sliide", "https://sliide.com");
+});
+
+// Asserts a given link as the expected href
+Cypress.Commands.add("assertHref", (linkText, expectedHref) => {
+  cy.get("a")
+    .contains(linkText)
+    .then(($link) => {
+      expect($link.attr("href")).to.equal(expectedHref);
+    });
+});

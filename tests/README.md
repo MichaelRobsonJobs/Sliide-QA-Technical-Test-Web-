@@ -13,3 +13,6 @@ Bugs
 How To Run
 
 - You can run linting and prettier
+
+Notes:
+I used different selector types on purpose just to show my understanding of finding elements based on class, ID, name etc
