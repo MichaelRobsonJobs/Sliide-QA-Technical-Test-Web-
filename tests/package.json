@@ -1,0 +1,14 @@
+{
+  "name": "technical-task-qa-web-tests",
+  "version": "0.0.1",
+  "description": "Tests to cover the tech task",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "author": "Michael Robson",
+  "devDependencies": {
+    "cypress": "^9.5.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }
+}
