@@ -38,3 +38,7 @@ Cypress.Commands.add("assertHref", (linkText, expectedHref) => {
       expect($link.attr("href")).to.equal(expectedHref);
     });
 });
+
+Cypress.Commands.add("assertURL", (expectedURL) => {
+  cy.url().should("eq", expectedURL);
+});
