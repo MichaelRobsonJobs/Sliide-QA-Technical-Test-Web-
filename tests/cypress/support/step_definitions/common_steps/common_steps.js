@@ -16,3 +16,7 @@ Given("I see the copyright section", () => {
 When("I reload the page", () => {
   cy.reload();
 });
+
+Then("text {string} is present", (expected) => {
+  cy.assertTextPresent(expected);
+});

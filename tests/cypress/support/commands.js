@@ -42,3 +42,7 @@ Cypress.Commands.add("assertHref", (linkText, expectedHref) => {
 Cypress.Commands.add("assertURL", (expectedURL) => {
   cy.url().should("eq", expectedURL);
 });
+
+Cypress.Commands.add("assertTextPresent", (experctedText) => {
+  cy.contains(experctedText);
+});
