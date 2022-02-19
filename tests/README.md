@@ -57,7 +57,7 @@ The Readme gives both the username and password as pa55word
 
 **Screenshot**
 
-![Credntials image](bug_details\Credentials.png)
+<img src="bug_details\Credentials.png" width="700" height="500">
 
 ---
 
