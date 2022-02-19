@@ -20,7 +20,7 @@ Feature:  As a user I want to see my news
         Then I am taken to the news page
         When I click a view button I am taken to the image on the card
 
-    Scenario: News view button is clicked - Bug error message isn't as expected and no retry button
+    Scenario: News view button is clicked - Bug no retry button present
         Given I open the web site
         Given I go offline
         When I login with the test account
