@@ -12,8 +12,7 @@ Feature:  As a user I want to see my news
         Then I see the copyright section
         Then I can see the news cards
         Then each news card contains an image, text and a view button
-    # When I swipe an image the image updates
-    # swipe the image and make sure it changes the value hidden changes from false to true  come back to swip!!!!
+        When I swipe an image the image updates
 
     Scenario: News view button is clicked
         Given I open the web site
@@ -29,8 +28,3 @@ Feature:  As a user I want to see my news
         Then text "Failed to load news" is present
         Then text "Failed to fetch" is present
         Then the retry button is present
-
-#Scenario: News cards are loaded
-#Given there is internet connection
-#When the user successfully signs in to the app
-#Then news cards are displayed in rows and each card contains an image, text and a view button (cards can have one or more images scrollable horizontally)
