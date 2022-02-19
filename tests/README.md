@@ -157,7 +157,7 @@ A white screen is displayed
 
 **Screenshot**
 
-![IE11](bug_details\IE11.png)
+![IE](bug_details\IE11.png)
 
 ---
 
@@ -176,4 +176,4 @@ No console errors displayed
 Multiple console errors displayed
 
 **Screenshot**
-![Console Errors](bug_details\ConsoleErrors.png)
+![Errors](bug_details\ConsoleErrors.png)
