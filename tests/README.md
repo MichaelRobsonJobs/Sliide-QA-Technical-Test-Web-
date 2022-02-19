@@ -1,7 +1,3 @@
-COMMENT EVERYTHING!!!
-run on mac
-Merge to master and check read me look ok
-
 # How To Run
 
 ## Through command line
