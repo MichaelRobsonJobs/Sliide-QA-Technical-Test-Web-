@@ -57,7 +57,7 @@ The Readme gives both the username and password as pa55word
 
 **Screenshot**
 
-<img src="bug_details\Credentials.png" width="700" height="500">
+<img src="bug_details\Credentials.png" width="600" height="250">
 
 ---
 
@@ -76,8 +76,9 @@ We should never tell a user which part of the username or password is incorrect,
 We tell the user when the username is incorrect.
 
 **Screenshot**
-![Invalid User Image](bug_details\InvalidUser.png)
-![Invalid Password image](bug_details\InvalidPassword.png)
+
+<img src="bug_details\InvalidUser.png" width="900" height="450">
+<img src="bug_details\InvalidPassword.png" width="900" height="450">
 
 ---
 
@@ -157,7 +158,7 @@ A white screen is displayed
 
 **Screenshot**
 
-![IE](bug_details\IE11.png)
+<img src="bug_details\IE11.png" width="900" height="450">
 
 ---
 
@@ -176,4 +177,5 @@ No console errors displayed
 Multiple console errors displayed
 
 **Screenshot**
-![Errors](bug_details\ConsoleErrors.png)
+
+<img src="bug_details\ConsoleErrors.png" width="1418" height="721">
