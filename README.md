@@ -1,3 +1,5 @@
+## Note from Michael Robson: See tests and ReadMe explaining how to run them and bugs I would raise in /tree/main/tests
+-------------------
 # Sliide QA Technical Test (Web)
 ## Congratulations, you have reached the next stage which is solving a Sliide practical test.
 ##### Please create your own repo and share the solution with us
