@@ -74,6 +74,11 @@ When("I click a view button I am taken to the image on the card", () => {
   });
 });
 
+// We are expecting the button but a bug in the app means we don't see it
+Then("the retry button is present", () => {
+  cy.get("button#retry").should("be.visible");
+});
+
 When("I swipe an image the image updates", () => {
   cy.get("img#article_image_0").should("be.visible");
 

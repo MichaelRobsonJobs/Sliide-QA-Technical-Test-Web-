@@ -18,3 +18,8 @@ import "./commands";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// Clear cookies before every test
+beforeEach(() => {
+  cy.clearCookies();
+});

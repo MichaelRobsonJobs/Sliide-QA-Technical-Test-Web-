@@ -20,3 +20,7 @@ When("I reload the page", () => {
 Then("text {string} is present", (expected) => {
   cy.assertTextPresent(expected);
 });
+
+Given("I go offline", () => {
+  cy.offline();
+});

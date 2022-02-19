@@ -61,24 +61,3 @@ Then("I am taken to the news page", () => {
 When("I visit the login page", () => {
   cy.visit("/");
 });
-
-// movie this to commands
-const goOffline = () => {
-  cy.log("**go offline**")
-    .then(() => {
-      return Cypress.automation("remote:debugger:protocol", {
-        command: "Network.enable",
-      });
-    })
-    .then(() => {
-      return Cypress.automation("remote:debugger:protocol", {
-        command: "Network.emulateNetworkConditions",
-        params: {
-          offline: true,
-          latency: -1,
-          downloadThroughput: -1,
-          uploadThroughput: -1,
-        },
-      });
-    });
-};

@@ -8,7 +8,10 @@
     "eslint:check": "eslint \"**/*.{js,jsx,tsx}\"",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "beforeMerge": "npm run prettier:check && npm run eslint:check"
+    "beforeMerge": "npm run prettier:check && npm run eslint:check",
+    "allTests": "cypress run --browser electron",
+    "loginTests": "cypress run --browser electron -e TAGS=@LoginTests",
+    "newsTests": "cypress run --browser electron -e TAGS=@NewsTests"
   },
   "author": "Michael Robson",
   "devDependencies": {
