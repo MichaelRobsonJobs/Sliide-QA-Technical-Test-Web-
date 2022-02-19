@@ -36,7 +36,7 @@ Feature: As a user I want to log in to the web site
             | short         | Minimum 8 characters length |
             | wrongPassword | Password incorrect          |
 
-    Scenario: User login succeed (credentials provided below)
+    Scenario: User login succeed (credentials provided below) - Incorrect credentials provided I would rasie a bug ticket for it
         Given I open the web site
         When I login with the test account
         Then I am taken to the news page

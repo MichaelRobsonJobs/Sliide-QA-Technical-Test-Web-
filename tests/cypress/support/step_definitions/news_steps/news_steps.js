@@ -23,7 +23,7 @@ Then("each news card contains an image, text and a view button", () => {
     // Check the current card contains a h2 - all have different text so check present and not empty
     cy.get("@currentCard").find("h2").invoke("text").should("not.be.empty");
 
-    // Check the current card contains the expected text
+    // Check the current card contains the expected text (all have the same text so makes it easy to write a single step to check this)
     cy.get("@currentCard")
       .find("p")
       .should(
@@ -41,16 +41,16 @@ When("I click a view button I am taken to the image on the card", () => {
   cy.get(
     "div[class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root']"
   ).then((cards) => {
-    const TOTAL_CARDS = Cypress.$(cards).length;
-    cy.log("Total cards: " + TOTAL_CARDS);
-    const RANDOM_CARD = Math.floor(Math.random() * TOTAL_CARDS);
-    cy.log("The card to test this time is at position: " + RANDOM_CARD);
+    const total_cards = Cypress.$(cards).length;
+    cy.log("Total cards: " + total_cards);
+    const random_card = Math.floor(Math.random() * total_cards);
+    cy.log("The card to test this time is at position: " + random_card);
 
     // Get the img element at the random position and save the src
     cy.get(
       "div[class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root']"
     )
-      .eq(RANDOM_CARD)
+      .eq(random_card)
       .find("img")
       .then((image) => {
         // Save the image src
@@ -60,21 +60,21 @@ When("I click a view button I am taken to the image on the card", () => {
         cy.get(
           "div[class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root']"
         )
-          .eq(RANDOM_CARD)
+          .eq(random_card)
           .find("a")
           .then((link) => {
             const href = link.attr("href");
             cy.log("The Link href is " + href);
             cy.log("The image src is " + src);
 
-            // Now we assert the links are both equal without even following the link... (different domains)
+            // Now we assert the links are both equal without even following the link (different domains so clicking them isn't an option as that's not allowed in Cypress)
             expect(src).to.equal(href);
           });
       });
   });
 });
 
-// We are expecting the button but a bug in the app means we don't see it
+// We are expecting the button but a bug in the app means we don't see it so I've assumed it would have this selector and when fixed the test would pass
 Then("the retry button is present", () => {
   cy.get("button#retry").should("be.visible");
 });

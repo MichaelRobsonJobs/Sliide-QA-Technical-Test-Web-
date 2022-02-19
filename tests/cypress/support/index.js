@@ -19,7 +19,7 @@ import "./commands";
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-// Clear cookies before every test
+// Clear cookies before every test so each test starts from fresh
 beforeEach(() => {
   cy.clearCookies();
 });
